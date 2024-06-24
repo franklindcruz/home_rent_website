@@ -1,0 +1,25 @@
+{% extends 'base_layout.html' %}
+
+{% include 'admin_navbar.html' %}
+
+{% block msgs %}
+{% include 'messages.html' %}
+{% endblock %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row col-md-6 offset-md-3">
+            <h1 class="text-center mt-5">Admin Login</h1>
+            <form action="{% url 'admin_login' %}" method="POST" class="mt-5 ">
+                {% csrf_token %}
+                {{form.as_p}}
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="remember_me">
+                    <label class="form-check-label" for="remember_me">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html '%}
+
+{% block content %}
+
+<div class="container">
+    <h2>Add Property</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="property_name">Property Name</label>
+            <input type="text" class="form-control" id="property_name" name="property_name" required>
+        </div>
+        <div class="form-group">
+            <label for="property_type">Property Type</label>
+            <select class="form-control" id="property_type" name="property_type" required>
+                <option value="1">House</option>
+                <option value="2">Apartment</option>
+                <option value="3">Villa</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="property_price">Property Price</label>
+            <input type="number" class="form-control" id="property_price" name="property_price" required>
+        </div>
+        <div class="form-group">
+            <label for="property_area">Property Area</label>
+            <input type="number" class="form-control" id="property_area" name="property_area" required>
+        </div>
+        <div class="form-group">
+            <label for="property_bedroom">Property Bedroom</label>
+            <input type="number" class="form-control" id="property_bedroom" name="property_bedroom" required>
+        </div>
+        <div class="form-group">
+            <label for="property_bathroom">Property Bathroom</label>
+            <input type="number" class="form-control" id="property_bathroom" name="property_bathroom" required>
+        </div>
+        <div class="form-group">
+            <label for="property_garage">Property Garage</label>
+            <input type="number" class="form-control" id="property_garage" name="property_garage" required>
+        </div>
+        <div class="form-group">
+            <label for="property_description">Property Description</label>
+            <textarea class="form-control" id="property_description" name="property_description" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="property_image">Property Image</label>
+            <input type="file" class="form-control" id="property_image" name="property_image" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+    
+    {% endblock %}

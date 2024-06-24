@@ -1,0 +1,28 @@
+<!-- {% extends 'base_layout.html' %}
+
+
+{% block msgs %}
+{% include 'messages.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row col-md-6 offset-md-3">
+        <h1 class="text-center mt-5">Update User Record</h1>
+        
+        <form method="POST" class="mt-5" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+        <button class="btn btn-light "><a style="text-decoration:none;"
+                href="{% url 'profile' %}">Back</a></button>
+    </div>
+</div>
+
+{% endblock %} -->
